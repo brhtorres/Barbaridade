@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@700&display=swap');
+
+.navbar-brand {
+    font-family: 'Delius Unicase', cursive !important;
+    color: #ff6c04 !important;
+}
