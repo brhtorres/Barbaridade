@@ -21,8 +21,8 @@
 
   $name = $_POST["client_name"];
   $phone = $_POST["client_phone"];
-
-  $sql = "SELECT * FROM reservas WHERE nome_cliente = '$name' AND tel_cliente = '$phone' AND confirmed = '1'";
+  $dataAtual = date('Y/m/d', strtotime('now'));
+  $sql = "SELECT * FROM reservas WHERE nome_cliente = '$name' AND tel_cliente = '$phone' AND confirmed = '1' AND dia >= '$dataAtual'";
 
   $resultado = mysqli_query($conn,$sql) or die("Erro ao retornar dados");
 
@@ -89,9 +89,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="confirmacao.php">Confirmação</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
-                </li>
+                
                 </ul>
             </div>        
         </nav>
@@ -104,7 +102,7 @@
               exit;
           }
         ?>
-
+        <br> <h3 class="ml-5">SUAS RESERVAS:</h3>
         <div class="row justify-content-start mt-5 ml-5 no-gutters">
             <?php createCards(); ?>       
         </div> 

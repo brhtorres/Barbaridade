@@ -21,6 +21,7 @@
 
   $name = $_POST["client_name"];
   $phone = $_POST["client_phone"];
+  $dateLimit = date('Y/m/d', strtotime('now'));
 
   $sql = "SELECT * FROM reservas WHERE nome_cliente = '$name' AND tel_cliente = '$phone' AND confirmed = '0'";
 
@@ -96,9 +97,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="confirmacao.php">Confirmação</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
-                </li>
                 </ul>
             </div>        
         </nav>
@@ -111,7 +109,7 @@
               exit;
           }
         ?>
-
+        <br> <h3 class="ml-5">SUAS CONFIRMAÇÕES:</h3> 
         <div class="row justify-content-center mt-5 no-gutters">
             <?php createCards(); ?>       
         </div> 

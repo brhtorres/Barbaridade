@@ -59,9 +59,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="confirmacao.php">Confirmação</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
-                </li>
+                
                 </ul>
             </div>        
         </nav>
@@ -69,6 +67,7 @@
         <div class="row justify-content-center no-gutters">   
             <div class="col-6"><br>
                 <form method="POST" action="date-time.php">
+                    <h3>FAÇA SUA RESERVA:</h3><br>
                     <div class="form-group">
                         <label for="clientName">Nome:</label>
                         <input type="text" name = "name" class="form-control" id="inputName">

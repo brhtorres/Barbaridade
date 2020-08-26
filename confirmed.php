@@ -66,9 +66,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="confirmacao.php">Confirmação</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
-                </li>
+                
                 </ul>
             </div>        
         </nav>
@@ -77,7 +75,7 @@
             <div class="col-6"> <br>
               <?php 
 
-                if(strtotime('now') > strtotime($data_confirm)) {
+                if(strtotime('now') >= strtotime($data_confirm)) {
                     echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
                             Você não pode mais confirmar esta reserva. Tempo de confirmação excedido.
                             <button type='button' class='close' data-dismiss='alert' aria-label='Close'>

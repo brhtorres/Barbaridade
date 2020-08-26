@@ -87,9 +87,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="confirmacao.php">Confirmação</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
-                </li>
+                
                 </ul>
             </div>        
         </nav>
@@ -97,6 +95,8 @@
         <div class="row justify-content-center no-gutters">   
             <div class="col-6"><br>
                 <form method="POST" action="salvarReserva.php">
+
+                    <h3>ONDE E QUANDO:</h3><br>
                     
                     <div class="form-group">
 
@@ -161,7 +161,7 @@
 
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="checkConfirm">
-                        <label class="form-check-label" for="checkConfirm">Estou ciente que para a garantia desta reserva devo realizar a confirmação, neste site, até um dia antes da data escolhida.</label>
+                        <label class="form-check-label" for="checkConfirm">Estou ciente que para a garantia desta reserva devo realizar a confirmação, neste site, em até 24 horas antes da data escolhida.</label>
                     </div> <br>
                     <button type="submit" class="btn btn-primary">Reservar</button>
                 </form>

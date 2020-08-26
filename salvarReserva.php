@@ -26,7 +26,6 @@
   $data_confirm = date('Y/m/d', strtotime('-1 day', strtotime($day))); 
   $confirmed = false; 
 
-
   $sql = "INSERT INTO reservas (nome_cliente, tel_cliente, mesa, dia, horario, data_confirm, confirmed) VALUES ('$name', '$phone', '$table', '$day', '$time', '$data_confirm', '$confirmed')";
   
   $result = mysqli_query($conn, $sql);
@@ -71,9 +70,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="confirmacao.php">Confirmação</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
-                </li>
+               
                 </ul>
             </div>        
         </nav>
